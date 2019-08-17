@@ -30,9 +30,9 @@ class _ContactPageState extends State<ContactPage> {
     else
       _editedContact = Contact.fromMap(widget.contact.toMap());
 
-      _nameController.text = _editedContact.name;
-      _emailController.text = _editedContact.email;
-      _phoneController.text = _editedContact.phone;
+    _nameController.text = _editedContact.name;
+    _emailController.text = _editedContact.email;
+    _phoneController.text = _editedContact.phone;
   }
 
   @override
@@ -52,21 +52,22 @@ class _ContactPageState extends State<ContactPage> {
           padding: EdgeInsets.all(10),
           child: Column(
             children: <Widget>[
-              // GestureDetector(
-              //   child: Container(
-              //     width: 150,
-              //     height: 150,
-              //     decoration: BoxDecoration(
-              //       shape: BoxShape.circle,
-              //       image: DecorationImage(
-              //         image: _editedContact.image != null
-              //             ? FileImage(File(_editedContact.image))
-              //             : AssetImage("images/default.png"),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              GestureDetector(
+                child: Container(
+                  width: 150,
+                  height: 150,
+                  // decoration: BoxDecoration(
+                  //   shape: BoxShape.circle,
+                  //   image: DecorationImage(
+                  //     image: _editedContact.image != null
+                  //         ? FileImage(File(_editedContact.image))
+                  //         : AssetImage("images/default.png"),
+                  //   ),
+                  // ),
+                ),
+              ),
               TextField(
+                controller: _nameController,
                 decoration: InputDecoration(
                   labelText: "Nome",
                 ),
@@ -78,6 +79,7 @@ class _ContactPageState extends State<ContactPage> {
                 },
               ),
               TextField(
+                controller: _emailController,
                 decoration: InputDecoration(
                   labelText: "Email",
                 ),
@@ -88,6 +90,7 @@ class _ContactPageState extends State<ContactPage> {
                 },
               ),
               TextField(
+                controller: _phoneController,
                 decoration: InputDecoration(
                   labelText: "Telefone",
                 ),
