@@ -65,14 +65,14 @@ class _ContactPageState extends State<ContactPage> {
                 child: Container(
                   width: 150,
                   height: 150,
-                  // decoration: BoxDecoration(
-                  //   shape: BoxShape.circle,
-                  //   image: DecorationImage(
-                  //     image: _editedContact.image != null
-                  //         ? FileImage(File(_editedContact.image))
-                  //         : AssetImage("images/default.png"),
-                  //   ),
-                  // ),
+                  decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: _editedContact.image != null
+                        ? FileImage(File(_editedContact.image))
+                        : AssetImage("images/default.png"),
+                  ),
+                ),
                 ),
               ),
               TextField(
@@ -127,12 +127,12 @@ class _ContactPageState extends State<ContactPage> {
               content: Text("Se sair as alterações serão perdidas"),
               actions: <Widget>[
                 FlatButton(
-                  color: Colors.indigo,
+                  textColor: Colors.indigo,
                   child: Text("Cancelar"),
                   onPressed: () => Navigator.pop(context),
                 ),
                 FlatButton(
-                  color: Colors.indigo,
+                  textColor: Colors.indigo,
                   child: Text("Sair"),
                   onPressed: () {
                     Navigator.pop(context);

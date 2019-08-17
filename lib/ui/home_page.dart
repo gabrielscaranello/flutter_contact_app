@@ -55,14 +55,14 @@ class _HomePageState extends State<HomePage> {
               Container(
                 width: 80,
                 height: 80,
-                // decoration: BoxDecoration(
-                //   shape: BoxShape.circle,
-                //   image: DecorationImage(
-                //     image: contacts[index].image == null
-                //         ? FileImage(File(contacts[index].image))
-                //         : AssetImage("images/default.png"),
-                //   ),
-                // ),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: contacts[index].image != null
+                        ? FileImage(File(contacts[index].image))
+                        : AssetImage("images/default.png"),
+                  ),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(left: 10),
